@@ -1,11 +1,11 @@
 :root {
-  --bg: #0f172a;
-  --surface: #111827;
-  --card: #1f2937;
-  --text: #e5e7eb;
+  --bg: #020617;
+  --surface: #0f172a;
+  --card: #111827;
+  --text: #e2e8f0;
   --muted: #94a3b8;
-  --primary: #38bdf8;
-  --primary-strong: #0ea5e9;
+  --primary: #22d3ee;
+  --primary-strong: #06b6d4;
   --border: #334155;
 }
 
@@ -13,16 +13,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
-  background: linear-gradient(180deg, #020617, #0f172a 35%);
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 45%);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .container {
-  width: min(1100px, 92vw);
+  width: min(1080px, 92vw);
   margin: 0 auto;
 }
 
@@ -39,8 +43,9 @@ body {
 }
 
 .brand {
+  color: var(--text);
+  text-decoration: none;
   font-weight: 700;
-  letter-spacing: 0.3px;
 }
 
 .nav-links {
@@ -58,13 +63,14 @@ body {
 }
 
 .hero-content {
-  padding: 3rem 0 2rem;
+  padding: 3.5rem 0 2rem;
 }
 
 .tag {
+  display: inline-block;
   color: var(--primary);
   font-weight: 600;
-  margin-bottom: 0.2rem;
+  margin: 0;
 }
 
 h1,
@@ -74,34 +80,64 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  margin: 0.2rem 0 1rem;
+  font-size: clamp(2rem, 4.2vw, 3.3rem);
+  margin: 0.6rem 0 1rem;
+  max-width: 18ch;
 }
 
-.highlight {
+.lead {
+  color: var(--muted);
+  max-width: 66ch;
+}
+
+.hero-metrics {
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+}
+
+.hero-metrics li {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(17, 24, 39, 0.7);
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-metrics strong {
   color: var(--primary);
+  font-size: 1.25rem;
+}
+
+.hero-metrics span {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .hero-actions {
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
   display: flex;
-  gap: 0.8rem;
   flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
 .btn {
   border: 1px solid var(--border);
   color: var(--text);
   text-decoration: none;
-  padding: 0.6rem 1rem;
+  padding: 0.62rem 1rem;
   border-radius: 10px;
 }
 
 .btn.primary {
-  background: var(--primary);
   border-color: var(--primary);
-  color: #0b1120;
-  font-weight: 600;
+  background: var(--primary);
+  color: #042f2e;
+  font-weight: 700;
 }
 
 .btn.primary:hover {
@@ -112,24 +148,40 @@ h1 {
   margin: 3rem 0;
 }
 
+.section-head p {
+  color: var(--muted);
+  margin-top: -0.4rem;
+}
+
 .grid {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+}
+
+.cards-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .card,
 .timeline-item,
 .post,
 .contact {
-  background: rgba(31, 41, 55, 0.7);
+  background: rgba(17, 24, 39, 0.78);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 1rem 1.2rem;
+  padding: 1rem 1.1rem;
+}
+
+.card p,
+.timeline-item p,
+.post p,
+.contact p {
+  color: var(--muted);
 }
 
 .card ul {
+  margin: 0.3rem 0 0;
   padding-left: 1.2rem;
   color: var(--muted);
 }
@@ -140,8 +192,23 @@ h1 {
 }
 
 .meta {
-  color: var(--primary);
-  margin-top: -0.4rem;
+  color: var(--primary) !important;
+  margin: -0.3rem 0 0;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.skill-tags span {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: rgba(15, 23, 42, 0.85);
+  color: var(--text);
+  font-size: 0.92rem;
 }
 
 .posts {
@@ -149,17 +216,20 @@ h1 {
   gap: 0.8rem;
 }
 
-.post p,
-.contact p {
-  color: var(--muted);
-  margin: 0.4rem 0;
+.contact a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
 }
 
 footer {
   border-top: 1px solid var(--border);
-  padding: 1.5rem 0;
-  text-align: center;
   color: var(--muted);
+  text-align: center;
+  padding: 1.4rem 0;
 }
 
 @media (max-width: 720px) {
@@ -169,7 +239,7 @@ footer {
   }
 
   .nav-links {
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
   }
 }

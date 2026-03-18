@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI产品经理｜个人博客</title>
+    <title>Alex Chen｜AI 产品经理个人博客</title>
     <meta
       name="description"
-      content="AI产品经理个人博客，用于展示简历项目、产品经历、方法论与个人思考。"
+      content="AI产品经理个人博客，用于展示简历项目、职业经历、方法论与产品思考。"
     />
+    <meta name="theme-color" content="#0f172a" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <nav class="nav container">
-        <span class="brand">AI PM Portfolio</span>
+    <header class="hero" id="top">
+      <nav class="nav container" aria-label="主导航">
+        <a class="brand" href="#top">Alex · AI PM</a>
         <div class="nav-links">
           <a href="#projects">项目</a>
           <a href="#experience">经历</a>
@@ -23,109 +24,142 @@
       </nav>
 
       <div class="container hero-content">
-        <p class="tag">AI 产品经理 · 个人品牌主页</p>
-        <h1>你好，我是 <span class="highlight">AI 产品经理</span></h1>
-        <p>
-          专注大模型产品从 0-1 落地，擅长需求拆解、评估体系设计、
-          业务指标闭环与跨团队协同。这个博客用于展示我的代表项目、职业经历与产品思考。
+        <p class="tag">AI 产品经理 · 简历项目展示站</p>
+        <h1>把大模型能力，转化为可量化的业务结果</h1>
+        <p class="lead">
+          我聚焦 AI 产品从 0-1 到规模化落地，擅长场景定义、评估体系设计、
+          人机协同流程和跨部门协作推进。该站点用于展示我的项目、经历和方法论。
         </p>
+
+        <ul class="hero-metrics" aria-label="关键成果">
+          <li><strong>3+</strong><span>年 AI 产品实践</span></li>
+          <li><strong>8</strong><span>个团队完成 AI 落地</span></li>
+          <li><strong>22%</strong><span>核心增长指标提升</span></li>
+        </ul>
+
         <div class="hero-actions">
           <a class="btn primary" href="#projects">查看项目</a>
-          <a class="btn" href="#contact">下载简历</a>
+          <a class="btn" href="#contact">联系合作</a>
         </div>
       </div>
     </header>
 
     <main class="container">
-      <section id="projects" class="section">
-        <h2>代表项目</h2>
-        <div class="grid">
+      <section class="section" id="projects">
+        <div class="section-head">
+          <h2>代表项目</h2>
+          <p>以下项目重点体现了我在策略、落地和业务闭环上的产品能力。</p>
+        </div>
+
+        <div class="grid cards-3">
           <article class="card">
             <h3>企业知识库 Copilot</h3>
             <p>
-              负责从需求调研到上线迭代全流程，结合 RAG + Agent 能力，支持内部知识问答与 SOP 自动化。
+              负责从需求调研到灰度上线全流程，基于 RAG + Agent
+              打造企业知识问答与 SOP 执行助手。
             </p>
             <ul>
-              <li>3个月内覆盖 8 个业务团队，周活提升至 65%</li>
-              <li>问答准确率从 62% 提升到 84%</li>
-              <li>建立 Prompt + 评估集 + 人工兜底的质量闭环</li>
+              <li>3 个月覆盖 8 个业务团队，周活跃率达 65%</li>
+              <li>问答准确率由 62% 提升至 84%</li>
+              <li>建立 Prompt、评估集与人工兜底的质量闭环</li>
             </ul>
           </article>
 
           <article class="card">
             <h3>AI 营销文案助手</h3>
             <p>
-              设计多场景文案工作流（投放、社媒、电商），通过模板化策略降低内容生产成本。
+              设计投放/社媒/电商多场景内容工作流，形成模板化策略与效果反馈机制。
             </p>
             <ul>
-              <li>平均出稿时间由 45 分钟缩短到 8 分钟</li>
+              <li>平均出稿时长从 45 分钟缩短到 8 分钟</li>
               <li>A/B 测试点击率提升 22%</li>
-              <li>构建“目标受众-卖点-语气”参数化编辑体验</li>
+              <li>支持“受众-卖点-语气”参数化生成</li>
             </ul>
           </article>
 
           <article class="card">
             <h3>客服质检智能平台</h3>
             <p>
-              建立大模型驱动的会话质检系统，实现自动抽检、风险归因与改进建议输出。
+              搭建大模型驱动的会话质检系统，实现自动抽检、风险归因和改进建议输出。
             </p>
             <ul>
               <li>人工抽检成本下降 50%</li>
-              <li>重大风险会话识别召回率达到 91%</li>
+              <li>高风险会话召回率达到 91%</li>
               <li>月均沉淀可执行优化建议 120+ 条</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section id="experience" class="section">
-        <h2>职业经历</h2>
+      <section class="section" id="experience">
+        <div class="section-head">
+          <h2>职业经历</h2>
+          <p>围绕“业务目标-产品策略-数据验证”持续迭代产品价值。</p>
+        </div>
+
         <div class="timeline">
-          <div class="timeline-item">
+          <article class="timeline-item">
             <h3>高级 AI 产品经理｜某互联网公司</h3>
             <p class="meta">2022 - 至今</p>
-            <p>
-              负责智能化中台与业务场景落地，主导多款 AI 产品的规划、路线图与商业化验证。
-            </p>
-          </div>
-          <div class="timeline-item">
+            <p>负责智能化产品中台和业务场景落地，推动多条 AI 产品线商业化验证。</p>
+          </article>
+
+          <article class="timeline-item">
             <h3>产品经理｜B2B SaaS 公司</h3>
             <p class="meta">2019 - 2022</p>
-            <p>
-              聚焦数据产品与运营工具，构建可视化分析能力，推动关键北极星指标持续增长。
-            </p>
-          </div>
+            <p>主导数据产品与运营工具建设，支持增长策略并优化关键北极星指标。</p>
+          </article>
         </div>
       </section>
 
-      <section id="blog" class="section">
-        <h2>产品思考</h2>
+      <section class="section" id="skills">
+        <div class="section-head">
+          <h2>核心能力</h2>
+        </div>
+        <div class="skill-tags" aria-label="技能标签">
+          <span>AI 产品规划</span>
+          <span>LLM 应用设计</span>
+          <span>RAG/Agent 场景化</span>
+          <span>评估指标体系</span>
+          <span>A/B 测试与增长</span>
+          <span>跨团队协作推进</span>
+        </div>
+      </section>
+
+      <section class="section" id="blog">
+        <div class="section-head">
+          <h2>产品思考</h2>
+          <p>输出对 AI 产品的系统化判断与落地方法。</p>
+        </div>
+
         <div class="posts">
           <article class="post">
             <h3>从“能回答”到“能交付”：AI 产品价值判断框架</h3>
-            <p>如何把模型能力映射为真实业务价值，并建立可持续迭代机制。</p>
+            <p>如何将模型能力映射为真实业务价值，并构建可持续迭代机制。</p>
           </article>
+
           <article class="post">
-            <h3>我如何设计 AI 功能的评估指标体系</h3>
-            <p>覆盖离线评估、在线行为、业务结果三层指标，避免“只看准确率”的陷阱。</p>
+            <h3>AI 功能评估体系：离线、在线、业务三层指标</h3>
+            <p>避免只看准确率，建立完整的效果与收益判断标准。</p>
           </article>
+
           <article class="post">
-            <h3>做 AI PM 以后，我的需求文档发生了什么变化</h3>
-            <p>PRD 从功能说明变成“场景-策略-边界-评估”的实验设计文档。</p>
+            <h3>AI 时代 PRD 的变化：从“说明文档”到“实验设计”</h3>
+            <p>通过场景、策略、边界、评估四要素提升需求交付质量。</p>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="section contact">
+      <section class="section contact" id="contact">
         <h2>联系我</h2>
-        <p>邮箱：aipm@example.com</p>
+        <p>邮箱：<a href="mailto:aipm@example.com">aipm@example.com</a></p>
         <p>微信：AIPM-Portfolio</p>
-        <p>GitHub：github.com/yourname</p>
+        <p>GitHub：<a href="https://github.com/yourname">github.com/yourname</a></p>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 AI PM Portfolio. All rights reserved.</p>
+      <p>© 2026 Alex Chen · AI PM Portfolio</p>
     </footer>
   </body>
 </html>
